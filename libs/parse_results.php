@@ -12,8 +12,7 @@ function parse_results($file)
 
     foreach ($lines as $line) {
         $column = explode(':', $line);
-print_r($column);
-exit;
+
         $fw = $column[0];
         $rps    = (float) trim($column[1]);
         $memory = (float) trim($column[2])/1024/1024;
