@@ -1,7 +1,13 @@
 #!/bin/sh
 
 cd `dirname $0`
-. ./_functions.sh
+
+if [ "$2" = "siege" ];
+then
+    . ./_functions_siege.sh
+else
+    . ./_functions.sh
+fi
 
 base="$1"
 bm_name=`basename $0 .sh`

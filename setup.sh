@@ -10,6 +10,11 @@ if [ ! `which ab` ]; then
     exit 1;
 fi
 
+if [ ! `which siege` ]; then
+    echo "siege command not found."
+    exit 1;
+fi
+
 if [ ! `which curl` ]; then
     echo "curl command not found."
     exit 1;
