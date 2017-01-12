@@ -45,7 +45,7 @@ body {
   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  padding: 20px;
+  padding: 10px;
 }
 </style>
 <script src="https://www.google.com/jsapi"></script>
@@ -89,7 +89,7 @@ if (file_exists($url_file)) {
             $url .= '?' . $parts['query'];
         }
         echo '<li><a href="' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') .
-             '">' . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') .
+             '">' . htmlspecialchars($parts['path'], ENT_QUOTES, 'UTF-8') .
              '</a></li>' . "\n";
     }
 }
@@ -99,8 +99,10 @@ if (file_exists($url_file)) {
 <hr>
 
 <footer>
-<p style="text-align: right">This page is a part of <a href="https://github.com/Askedio/php-framework-benchmark">php-framework-benchmark</a>.</p>
-<p style="text-align: right">- originally from kenjis <a href="https://github.com/kenjis/php-framework-benchmark">php-framework-benchmark</a>.</p>
+<p style="text-align: right">
+  This page is a part of <a href="https://github.com/Askedio/php-framework-benchmark">php-framework-benchmark</a>.
+  <br>- forked from kenjis <a href="https://github.com/kenjis/php-framework-benchmark">php-framework-benchmark</a>.
+</p>
 </footer>
 </body>
 </html>
