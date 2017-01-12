@@ -40,16 +40,37 @@ list($chart_file, $div_file) = make_graph('file', 'Included Files', 'count');
 <head>
 <meta charset="UTF-8">
 <title>PHP Framework Benchmark</title>
+<style>
+body {
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding: 20px;
+}
+</style>
 <script src="https://www.google.com/jsapi"></script>
 <script>
-<?php
-echo $chart_rpm, $chart_mem, $chart_time, $chart_file;
-?>
+  <?php echo $chart_rpm, $chart_mem, $chart_time, $chart_file; ?>
 </script>
 </head>
 <body>
 <h1>PHP Framework Benchmark</h1>
-<h2>Hello World Benchmark</h2>
+
+<p>Testing on: <a href="https://m.do.co/c/6a3562fcb310">Digital Ocean</a> Ubuntu 16.04.1 x64 2gb / 2CPU droplet</p>
+<p>Testing with: siege -c 10 -t 3s -r 3 -b -q</p>
+<p>PHP Info: <a href="phpinfo.php">Here</a></p>
+<p>Server Install: <a href="install.sh">Here</a></p>
+<p>Webgrind: <a href="http://dev-mvcbenchmark.asked.io/webgrind">Here</a>, append ?XDEBUG_PROFILE (on the <a href="http://dev-mvcbenchmark.asked.io/">dev site</a>) to the MVC test url to log data.</p>
+
+<p>Requests
+        <ul>
+                <li>https://github.com/radarphp/Radar.Project</li>
+                <li>tweet @asked_io to request</li>
+        </ul>
+</p>
+
+
+
 <div>
 <?php
 echo $div_rpm, $div_mem, $div_time, $div_file;
@@ -78,7 +99,8 @@ if (file_exists($url_file)) {
 <hr>
 
 <footer>
-    <p style="text-align: right">This page is a part of <a href="https://github.com/kenjis/php-framework-benchmark">php-framework-benchmark</a>.</p>
+<p style="text-align: right">This page is a part of <a href="https://github.com/Askedio/php-framework-benchmark">php-framework-benchmark</a>.</p>
+<p style="text-align: right">- originally from kenjis <a href="https://github.com/kenjis/php-framework-benchmark">php-framework-benchmark</a>.</p>
 </footer>
 </body>
 </html>
